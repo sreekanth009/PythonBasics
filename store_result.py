@@ -1,34 +1,24 @@
+## problem to find, the elements of first array in second array
+# store those elements in another array list 
+# if we have repeated elements in array, find the repeated elements in newly created list
+
 import random
 
-randomList = []
-randomHundred = []
-
-for i in range(0, 10000):
-    randomNUmber = random.randint(0, 10000)
-    randomList.append(randomNUmber)
-# print(randomList)
-
-for i in range(0, 100):
-    randomNUmber = random.randint(0, 100)
-    randomHundred.append(randomNUmber)
-# print(randomHundred)
-
-# for i in randomHundred:
-#     if i in randomList:
-#         print ('yes', i)
-#     else:
-#         print ('no', i)
+randomList = ['2','34','21','16','64','76','98','89','123','768','2113','96','23','52','99']
+randomHundred = ['89','96','123','23','100','23']
+resultStore = []
 
 def findNumber(num, listNum):
     for i in listNum:
-        # print ('first', i)
         if (i == num):
-            # print ('after check', i)
-            return (True, num)
-    # print ('if false', i)
+            resultStore.append(num)
+            return (True, resultStore)
     return (False, num)
 
-# print(findNumber(3, [4,3,21,4422,431,34]))
-
 for element in randomHundred:
-    print(findNumber(element, randomList))
+    if element in resultStore:
+        print ('from existing result', element)
+        print(findNumber(element, resultStore))
+    elif element in randomList:
+        print ('from main', element)
+        print(findNumber(element, randomList))
