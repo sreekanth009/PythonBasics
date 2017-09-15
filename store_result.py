@@ -11,13 +11,13 @@ for i in range(0, 10000):
 for i in range(0, 100):
     randomNUmber = random.randint(0, 100)
     randomHundred.append(randomNUmber)
-print(randomHundred)
+# print(randomHundred)
 
-for i in randomHundred:
-    if i in randomList:
-        print ('yes', i)
-    else:
-        print ('no', i)
+# for i in randomHundred:
+#     if i in randomList:
+#         print ('yes', i)
+#     else:
+#         print ('no', i)
 
 def findNumber(num, listNum):
     for i in listNum:
